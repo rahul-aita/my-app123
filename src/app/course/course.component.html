@@ -1,0 +1,22 @@
+
+<div>
+    <app-search></app-search>
+    <app-filter></app-filter>
+</div>
+<div class="course-container" *ngFor="let p of products">
+    <div class="course-card">
+        <div>
+            <img [src]="p.images" alt="" style="width: 220px;height: 140px;">
+        </div>
+        <div class="course-name">{{p.name}}</div>
+        <div class="course-desctiption">{{p.description}}</div>
+        <div class="details">
+            <div class="couser-price ">Price:${{p.price}}</div>
+            <div class="course-button mt-4">
+                <button class=" btn btn-success my-2">Buy Now</button>
+                <button class=" btn btn-primary">Show details</button>
+                <p>{{parentData}}</p>
+            </div>
+        </div>
+    </div>
+</div>
